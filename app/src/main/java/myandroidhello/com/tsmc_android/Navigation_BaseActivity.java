@@ -1,6 +1,7 @@
 package myandroidhello.com.tsmc_android;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.LayoutRes;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -65,13 +66,16 @@ public class Navigation_BaseActivity extends AppCompatActivity {
                     switch (menuItem.getItemId()) {
                         case R.id.navItemOne:
 //                            Log.d("rrrrr","rrrrrr");
+                            NV.setBackgroundColor(Color.parseColor("#F04C32"));
                             Intent intent = new Intent();
                             intent.setClass(Navigation_BaseActivity.this, MainActivity.class);
                             startActivity(intent);
                             overridePendingTransition(0, 0);
                             finish();
+
                             break;
                         case R.id.navItemTwo:
+                            NV.setBackgroundColor(Color.parseColor("#F04C32"));
                             Intent intent2 = new Intent();
 //                            intent2.setClass(Navigation_BaseActivity.this, PersonInfoActivity.class);
                             startActivity(intent2);
@@ -80,6 +84,8 @@ public class Navigation_BaseActivity extends AppCompatActivity {
                             break;
 
                         case R.id.navItemEight:
+                            NV.setBackgroundColor(Color.parseColor("#F04C32"));
+
                             Log.d("rrrrr","rrrrrr");
 //                            Intent intent1=new Intent(Navigation_BaseActivity.this,FriendsActivity.class);
 //                            startActivity(intent1);

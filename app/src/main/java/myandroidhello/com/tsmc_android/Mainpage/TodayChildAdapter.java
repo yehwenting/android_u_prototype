@@ -2,6 +2,7 @@ package myandroidhello.com.tsmc_android.Mainpage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -15,8 +16,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import myandroidhello.com.tsmc_android.DetailChild.DetailChildActivity;
 import myandroidhello.com.tsmc_android.DetailParent.DetailParentActivity;
 import myandroidhello.com.tsmc_android.Model.WorkOrder;
+import myandroidhello.com.tsmc_android.Model.WorkOrderChild;
 import myandroidhello.com.tsmc_android.R;
 
 /**
@@ -48,15 +51,27 @@ public class TodayChildAdapter extends  RecyclerView.Adapter<TodayChildAdapter.T
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TodayChildViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull final TodayChildViewHolder holder, int position) {
+        if(position>0){
+            final WorkOrderChild workOrderChild=workOrder.getWorkOrderChildren().get(position-1);
+            holder.name.setText(workOrderChild.getNum());
+        }
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, DetailParentActivity.class);
-                context.startActivity(intent);
+                if(holder.name.getText().equals("F15-ASSET100")){
+                    Intent intent=new Intent(context, DetailChildActivity.class);
+                    context.startActivity(intent);
+                }else{
+                    Intent intent=new Intent(context, DetailParentActivity.class);
+                    context.startActivity(intent);
+                }
+
             }
         });
+        if(position==0){
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#ffecdd"));
+        }
 
     }
 
@@ -67,7 +82,7 @@ public class TodayChildAdapter extends  RecyclerView.Adapter<TodayChildAdapter.T
 
     public class TodayChildViewHolder extends RecyclerView.ViewHolder {
 
-        TextView gname,uname,num,time,place,remain,note;
+        TextView name,uname,num,time,place,remain,note;
         Button join;
         ImageView pic,more;
         CardView cardView;
@@ -76,6 +91,7 @@ public class TodayChildAdapter extends  RecyclerView.Adapter<TodayChildAdapter.T
             super(itemView);
 
             cardView=itemView.findViewById(R.id.cardView2);
+            name=itemView.findViewById(R.id.cga_name);
 
         }
     }

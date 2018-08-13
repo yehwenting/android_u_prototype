@@ -4,45 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/hr_rv"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp">
-
-        <Button
-            android:id="@+id/numBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/background_edittext1"
-            android:text="工單"
-            android:bottomLeftRadius="10dp"
-            android:layout_marginStart="10dp"/>
-
-        <Button
-            android:id="@+id/processBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/background_edittext1_1"
-            android:text="保養作業程序"
-            android:layout_marginStart="10dp"/>
-
-        <Button
-            android:id="@+id/materialBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/background_edittext1_1"
-            android:text="材料"
-            android:layout_marginStart="10dp"/>
-    </LinearLayout>
-
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -66,7 +28,6 @@
                 android:layout_height="wrap_content">
                 <!--android:background="@drawable/background_group"-->
 
-
                 <TextView
                     android:id="@+id/cga_name"
                     android:layout_width="wrap_content"
@@ -80,13 +41,35 @@
                     android:textSize="18sp" />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/overall_rv1"
+                    android:id="@+id/record_rv1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/cga_name"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="13dp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_shape_gray"
+                    android:textColor="@color/white"
+                    android:text="全 X" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="108dp"
+                    android:background="@drawable/button_shape_gray"
+                    android:textColor="@color/white"
+                    android:text="全 V" />
 
 
                 <!--android:textColor="#FFB800" -->

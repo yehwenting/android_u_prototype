@@ -51,7 +51,7 @@
                     android:background="@color/colorPrimaryDark" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/select"
                     android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:layout_alignEnd="@+id/view2"
@@ -65,7 +65,7 @@
                     android:layout_width="150dp"
                     android:layout_height="30dp"
                     android:layout_alignStart="@+id/cga_name"
-                    android:layout_below="@+id/button2"
+                    android:layout_below="@+id/select"
                     android:layout_marginTop="17dp"
                     android:background="@drawable/background_edittext"
                     android:ems="10"

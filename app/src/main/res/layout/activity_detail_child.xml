@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="bottom"
-                app:tabContentStart="72dp"
+                app:tabContentStart="10dp"
                 app:tabMode="scrollable" />
 
             <android.support.v7.widget.Toolbar
@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
-                    android:text="WO20170000013420"
+                    android:text="WO20170000013424"
                     android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/back"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -86,15 +86,15 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/submit"
+                    android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_marginTop="16dp"
                     android:text="呈核"
-                    android:textColor="@android:color/holo_red_light"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@android:color/holo_red_light"/>
 
             </android.support.constraint.ConstraintLayout>
 
