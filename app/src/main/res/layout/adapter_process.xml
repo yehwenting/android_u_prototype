@@ -69,8 +69,9 @@
                     android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
                     android:layout_alignStart="@+id/textView26"
-                    android:layout_below="@id/radioGroup"
+                    android:layout_marginTop="251dp"
                     android:text="測量值 " />
 
                 <TextView
@@ -90,40 +91,6 @@
                     android:layout_alignStart="@+id/textView26"
                     android:layout_marginTop="138dp"
                     android:text="結果" />
-
-                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/radioGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView26"
-                    android:layout_below="@+id/textView32"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp">
-
-                    <RadioButton
-                        android:id="@+id/radio_v"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="V"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-
-                    <RadioButton
-                        android:id="@+id/radio_x"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-
-                    <RadioButton
-                        android:id="@+id/radio_na"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="NA"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-                </RadioGroup>
 
                 <EditText
                     android:id="@+id/editText11"
@@ -154,8 +121,8 @@
                     android:layout_alignStart="@+id/textView26"
                     android:layout_below="@+id/textView26"
                     android:text="10"
-                    android:textSize="24sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textView34"
@@ -165,8 +132,8 @@
                     android:layout_alignStart="@+id/textView29"
                     android:layout_marginBottom="-62dp"
                     android:text="完成準備 : V"
-                    android:textSize="18sp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView35"
@@ -174,9 +141,50 @@
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/textView26"
                     android:layout_below="@+id/textView27"
-                    android:text="工具與材料準備：活動板手，螺絲起子活動板手工"
                     android:layout_marginTop="5dp"
-                    android:textColor="@android:color/black"/>
+                    android:text="工具與材料準備：活動板手，螺絲起子活動板手工"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="164dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_v"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/unchecked_btn"
+                        android:text="V"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_x"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/unchecked_btn"
+                        android:text="X"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_na"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/unchecked_btn"
+                        android:text="N/A"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
 
 
                 <!--android:textColor="#FFB800" -->

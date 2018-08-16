@@ -11,15 +11,16 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Mainpage.MainActivity" />
         <activity android:name=".LoginActivity">
-        </activity>
-        <activity android:name=".Mainpage.SearchActivity" />
-        <activity android:name=".DetailParent.DetailParentActivity"></activity>
-        <activity android:name=".DetailChild.DetailChildActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Mainpage.SearchActivity" />
+        <activity android:name=".DetailParent.DetailParentActivity"></activity>
+        <activity android:name=".DetailChild.DetailChildActivity">
+
         </activity>
     </application>
 

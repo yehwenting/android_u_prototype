@@ -19,6 +19,7 @@ import java.util.List;
 
 import myandroidhello.com.tsmc_android.Mainpage.MainActivity;
 import myandroidhello.com.tsmc_android.Model.PageView;
+import myandroidhello.com.tsmc_android.Model.TextDialogFragment;
 import myandroidhello.com.tsmc_android.R;
 
 public class DetailParentActivity extends AppCompatActivity {
@@ -94,22 +95,27 @@ public class DetailParentActivity extends AppCompatActivity {
         });
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 AlertDialog.Builder adb = new AlertDialog.Builder(DetailParentActivity.this)
                         .setTitle("錯誤訊息")
                         .setMessage("未填寫人力回報，請重新確認！！")
                         .setPositiveButton("確定", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-//                                Intent intent = new Intent(NextActivity.this, MainpageActivity.class);
-//                                startActivity(intent);
-//                                finish();
+                                showLoginDialog(view);
                             }
                         });
                 AlertDialog alertDialog = adb.create();
                 alertDialog.show();
             }
         });
+
+
+    }
+    public void showLoginDialog(View view)
+    {
+        TextDialogFragment dialog = new TextDialogFragment();
+        dialog.show(getFragmentManager(), "loginDialog");
     }
 
     private class SamplePagerAdapter extends PagerAdapter {
