@@ -44,7 +44,7 @@ public class MainActivity extends Navigation_BaseActivity {
         toolBar_title=findViewById(R.id.toolbar_title);
         //toolbar
         toolbar.setTitle("");//設置ToolBar Title
-        toolBar_title.setText("PM工單回報管理");
+        toolBar_title.setText("意外事故(異常)速報表");
         setUpToolBar();//使用父類別的setUpToolBar()，設置ToolBar
         CurrentMenuItem = 0;
         NV.getMenu().getItem(CurrentMenuItem).setChecked(true);//設置Navigation目前項目被選取狀態
@@ -52,13 +52,13 @@ public class MainActivity extends Navigation_BaseActivity {
 
     private void initData(){
         //fake data
-        for (int i=0;i<10;i++){
+        for (int i=0;i<4;i++){
             List<WorkOrderChild> workOrderChildren=new ArrayList<>();
-            if(i%2==0){
-                WorkOrderChild workOrderChild=new WorkOrderChild("F15-ASSET100","MAXADAMO","已回報","hello");
-                workOrderChildren.add(workOrderChild);
-            }
-            WorkOrder workOrder=new WorkOrder("WO20170000013310","Y_TILSMJ","待回報","detail",workOrderChildren);
+//            if(i%2==0){
+//                WorkOrderChild workOrderChild=new WorkOrderChild("F15-ASSET100","MAXADAMO","已回報","hello");
+//                workOrderChildren.add(workOrderChild);
+//            }
+            WorkOrder workOrder=new WorkOrder("ACC1070000003","Y_TILSMJ","待回報","detail",workOrderChildren);
             workOrderList.add(workOrder);
         }
 
@@ -66,11 +66,8 @@ public class MainActivity extends Navigation_BaseActivity {
     private void initView(){
         search=findViewById(R.id.searchDetail);
         mTabs =findViewById(R.id.tabs);
-        mTabs.addTab(mTabs.newTab().setText("本日(含)以前"));
-        mTabs.addTab(mTabs.newTab().setText("近一週"));
-        mTabs.addTab(mTabs.newTab().setText("逾期"));
-        mTabs.addTab(mTabs.newTab().setText("全部"));
-        mTabs.addTab(mTabs.newTab().setText("本日完成"));
+        mTabs.addTab(mTabs.newTab().setText("未結案"));
+        mTabs.addTab(mTabs.newTab().setText("本日結案"));
         recyclerView=findViewById(R.id.main_rv);
 //        recyclerView.setNestedScrollingEnabled(false);
         TodayAdapter todayAdapter = new TodayAdapter(workOrderList);

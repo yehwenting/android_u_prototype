@@ -69,9 +69,9 @@ public class TodayChildAdapter extends  RecyclerView.Adapter<TodayChildAdapter.T
 
             }
         });
-        if(position==0){
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#ffecdd"));
-        }
+//        if(position==0){
+//            holder.cardView.setCardBackgroundColor(Color.parseColor("#ffecdd"));
+//        }
 
     }
 

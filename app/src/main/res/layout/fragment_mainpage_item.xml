@@ -25,8 +25,9 @@
             >
 
             <RelativeLayout
-                android:layout_width="350dp"
-                android:layout_height="250dp">
+                android:layout_width="380dp"
+                android:layout_height="250dp"
+                android:background="@android:color/white">
                 <!--android:background="@drawable/background_group"-->
 
                 <TextView
@@ -38,54 +39,26 @@
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="17dp"
                     android:letterSpacing="0.1"
-                    android:text="WO20170000013420"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignBottom="@+id/cga_name"
-                    android:layout_marginStart="30dp"
-                    android:layout_toEndOf="@+id/textView9"
-                    android:src="@drawable/ic_brightness_1_black_24dp" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imageView2"
-                    android:layout_alignEnd="@+id/textView8"
-                    android:text="待回報"
-                    android:textColor="@color/statusOrange"
+                    android:text="ACC1070000003"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
                     android:layout_alignStart="@+id/cga_name"
-                    android:layout_below="@+id/cga_name"
-                    android:layout_marginTop="28dp"
-                    android:text="基準日\n 8/10"
+                    android:layout_marginTop="60dp"
+                    android:text="事故狀況 \n運輸車輛載送成品過程中發生交通事故"
                     android:textSize="14sp" />
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@+id/textView6"
-                    android:layout_margin="15dp"
-                    android:background="@color/colorPrimaryDark" />
 
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/textView6"
-                    android:layout_marginEnd="13dp"
-                    android:layout_toStartOf="@+id/imageView2"
-                    android:text="預計執行日\n 8/20" />
+                    android:layout_alignStart="@+id/cga_name"
+                    android:layout_centerVertical="true"
+                    android:text="提報人\n MFCHANGG張X峰" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -94,24 +67,41 @@
                     android:layout_alignTop="@+id/textView7"
                     android:layout_marginStart="25dp"
                     android:layout_toEndOf="@+id/textView7"
-                    android:text="工單執行期限\n 9/01" />
+                    android:text="事故部門\n 台北廠成品課" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView6"
-                    android:layout_below="@+id/view2"
-                    android:text="保養回報工程師 : Y_TILSMJ" />
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/cga_name"
+                    android:layout_marginBottom="62dp"
+                    android:text="發生地點\n廠區聯絡道" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/view2"
-                    android:layout_below="@+id/textView9"
-                    android:layout_marginTop="13dp"
-                    android:text="預防保養說明 :" />
+                    android:layout_alignStart="@+id/textView8"
+                    android:layout_alignTop="@+id/textView9"
+                    android:text="發生時間\n 2018/10/16 13:22:19" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/cga_name"
+                    android:layout_marginBottom="18dp"
+                    android:text="事故類別\n 02.意外事故" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView8"
+                    android:layout_alignTop="@+id/textView39"
+                    android:text="處理人\n吳大才" />
 
 
                 <!--android:textColor="#FFB800" -->
